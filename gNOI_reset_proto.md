@@ -272,6 +272,7 @@ boot: reading file packages.conf
 #############################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
 
 
+
 Both links down, not waiting for other switches
 Switch number is 1
 
@@ -290,9 +291,10 @@ Software clause at DFARS sec. 252.227-7013.
 
 
 
-Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Experimental Version 17.7.20210929:032559 [S2C-build-v177_throttle-1063-/nobackup/mcpre/BLD-BLD_V177_THROTTLE_LATEST_20210929_030812 133]
-Copyright (c) 1986-2021 by Cisco Systems, Inc.
-Compiled Wed 29-Sep-21 10:26 by mcpre
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.8.1, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2022 by Cisco Systems, Inc.
+Compiled Sat 09-Apr-22 00:47 by mcpre
 
 
 This software version supports only Smart Licensing as the software licensing mechanism.
@@ -325,26 +327,32 @@ Software feature.
 % No config present. Using default config
 
 FIPS: Flash Key Check : Key Not Found, FIPS Mode Not Enabled
-cisco C9300-24P (X86) processor with 1319374K/6147K bytes of memory.
-Processor board ID FCW2241DHBN
+cisco C9300-24T (X86) processor with 1310600K/6147K bytes of memory.
+Processor board ID FCW2129L03E
 2048K bytes of non-volatile configuration memory.
 8388608K bytes of physical memory.
 1638400K bytes of Crash Files at crashinfo:.
 11264000K bytes of Flash at flash:.
 
-Base Ethernet MAC Address          : 70:35:09:9e:b9:80
-Motherboard Assembly Number        : 73-18271-03
-Motherboard Serial Number          : FOC22396PK1
+Base Ethernet MAC Address          : a0:f8:49:11:c5:80
+Motherboard Assembly Number        : 73-17952-06
+Motherboard Serial Number          : FOC212869N3
 Model Revision Number              : A0
 Motherboard Revision Number        : A0
-Model Number                       : C9300-24P
-System Serial Number               : FCW2241DHBN
+Model Number                       : C9300-24T
+System Serial Number               : FCW2129L03E
 CLEI Code Number                   :
 
 
 No startup-config, starting autoinstall/pnp/ztp...
 
 Autoinstall will terminate if any input is detected on console
+Jun  8 23:44:53.063: %IOX-3-IOX_RESTARTABITLITY: R0/0: run_ioxn_caf: Stack is in N+1 mode, disabling sync for IOx restartability
+
+
+         --- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]:
 
 
 ```
