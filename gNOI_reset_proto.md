@@ -4,8 +4,7 @@
 
 ## Version: Cisco IOS XE 17.7
 
-
-![](imgs/iosxelifecycle.png)
+![](imgs/device_lifecycle.png)
 
 ## Factory Reset API
 
@@ -15,7 +14,10 @@ The factory reset API as described at [openconfig/gnoi](https://github.com/openc
 
 This module describes the capabilities of the gnoi_reset tooling which is used to factory reset Cisco Catalyst IOS XE devices like the Catalyst 9300 used in this example.
 
-The console port is use to watch as the device completes the factory reset and reboots. As part of the Day 0 workflows the ZTP process will be used to automatically configure the C9300 switch back to a configured state where the API's are ready for use once again. ZTP is discussed in other modules
+The console port is use to watch as the device completes the factory reset and reboots. As part of the Day 0 workflows the ZTP process will be used to automatically configure the C9300 switch back to a configured state where the API's are ready for use once again. ZTP is discussed in other modules.
+
+## Zero Touch Provisioning
+Once Factory reset is complete, we can use ZTP to add the necessary configurations to our device using NETCONF. To skip directly to learn more about ZTP, jump [here](ZTP.md).
 
 # Enable the gNMI API Interface
 
@@ -132,6 +134,9 @@ auto@pod24-xelab:~$ ./gnoi_reset -target_addr 10.1.1.5:50052 -target_name dd -no
 I1014 11:53:15.248633 2761247 gnoi_reset.go:59] Reset Called Successfully!
 auto@pod24-xelab:~$
 ```
+
+ # ZTP Break
+This will take a few minutes. In the meantime, review how to set up [ZTP](ZTP.md)
 
 # Console log
 
