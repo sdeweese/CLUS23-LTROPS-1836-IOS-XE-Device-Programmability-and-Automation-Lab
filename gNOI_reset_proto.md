@@ -146,8 +146,7 @@ When the gnoi_reset factor reset operation is called then the device will go dow
 ```
 C9300#
 Chassis 1 reloading, reason - Factory Reset
-Oct 14 11:50:31.175: %PMAN-5-EXITACTION: F0/0: pvp: Process manager is exiting: reload fp action requested
-Oct 14 11:50:32.839: %PMAN-5-EXITACTION: R0/0: pvp: Pger is exiting: rp processes exit with reload switch code
+Jun  8 16:34:42.825: %PMAN-5-EXITACTION: R0/0: pvp: Procger is exiting: rp processes exit with reload switch code
 
 
 Enabling factory reset for this reload cycle
@@ -156,16 +155,17 @@ Enabling factory reset for this reload cycle
 FACTORY-RESET-RESTORE-IMAGE Taking backup of flash:packages.conf
 FACTORY-RESET-RESTORE-IMAGE Searching for packages.conf on flash
 factory-reset-restore-image taking a backup of packages.conf from flash
-factory-reset-restore-image copying cat9k-cc_srdriver.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
-factory-reset-restore-image copying cat9k-espbase.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
-factory-reset-restore-image copying cat9k-guestshell.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
-factory-reset-restore-image copying cat9k-rpbase.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
-factory-reset-restore-image copying cat9k-sipbase.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
-factory-reset-restore-image copying cat9k-sipspa.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
-factory-reset-restore-image copying cat9k-srdriver.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
-factory-reset-restore-image copying cat9k-webui.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
-factory-reset-restore-image copying cat9k-wlc.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
-factory-reset-restore-image copying cat9k-rpboot.BLD_V177_THROTTLE_LATEST_20210929_030812_V17_7_0_106_2.SSA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-cc_srdriver.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-espbase.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-guestshell.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-lni.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-rpbase.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-rpboot.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-sipbase.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-sipspa.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-srdriver.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-webui.17.08.01.SPA.pkg to /tmp/factory_reset
+factory-reset-restore-image copying cat9k-wlc.17.08.01.SPA.pkg to /tmp/factory_reset
 factory-reset-restore-image copying packages.conf to /tmp/factory_reset
 % FACTORYRESET - Started Cleaning Up...
 
@@ -177,9 +177,9 @@ factory-reset-restore-image copying packages.conf to /tmp/factory_reset
 
 % FACTORYRESET - Making File System sd1 [0]
 Creating filesystem with 409600 4k blocks and 102544 inodes
-Filesystem UUID: fd34e17f-1407-44bc-a859-14832be035ee
+Filesystem UUID: 967e9817-6cad-4a4a-96d4-b142fbc2111f
 Superblock backups stored on blocks:
-        32768, 98304, 163840, 229376, 294912
+	32768, 98304, 163840, 229376, 294912
 
 Allocating group tables: done
 Writing inode tables: done
@@ -197,9 +197,9 @@ Writing superblocks and filesystem accounting information: done
 
 % FACTORYRESET - Making File System sd3 [0]
 Creating filesystem with 2816000 4k blocks and 704512 inodes
-Filesystem UUID: 50e430a9-ff1f-4bc7-83dd-a565d1ca887b
+Filesystem UUID: 30856fa9-0d8e-4556-9cf0-81be81f0bcd1
 Superblock backups stored on blocks:
-        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
 
 Allocating group tables: done
 Writing inode tables: done
@@ -217,9 +217,9 @@ Writing superblocks and filesystem accounting information: done
 
 % FACTORYRESET - Making File System sd6 [0]
 Creating filesystem with 131072 1k blocks and 32768 inodes
-Filesystem UUID: 322856ea-75e2-437f-ad60-e39ebb1b8fa6
+Filesystem UUID: 72c3f21a-11ed-4f2f-8619-33a014e139c6
 Superblock backups stored on blocks:
-        8193, 24577, 40961, 57345, 73729
+	8193, 24577, 40961, 57345, 73729
 
 Allocating group tables: done
 Writing inode tables: done
@@ -240,10 +240,10 @@ Writing superblocks and filesystem accounting information: done
 % FACTORYRESET - Making File System on SSD
 Discarding device blocks: done
 Creating filesystem with 29304945 4k blocks and 7331840 inodes
-Filesystem UUID: 4d1427ce-70eb-4323-b1b3-ee16a17205e8
+Filesystem UUID: 59801da9-4162-4b80-8401-cc237328fb35
 Superblock backups stored on blocks:
-        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
-        4096000, 7962624, 11239424, 20480000, 23887872
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+	4096000, 7962624, 11239424, 20480000, 23887872
 
 Allocating group tables: done
 Writing inode tables: done
@@ -252,25 +252,24 @@ Writing superblocks and filesystem accounting information: done
 
 % FACTORYRESET - Mounting Back usbflash1
 % FACTORYRESET - Factory reset done for SSD
-FACTORY-RESET-RESTORE-IMAGE Copying back image from /tmp/factory_reset onto /bootflash
+FACTORY-RESET-RESTORE-IMAGE Copying back image from /tmp/factory_reset onto /bootflash/
 ReloadReason=Factory Reset
-FACTORY-RESET-RESTORE-IMAGE Factory reset successful. Continuing with reboot...
-Setting BOOT image
+FACTORY-RESET-RESTORE-IMAGE Copying image is successful.
 Factory reset successful. Rebooting...
 
 Initializing Hardware......
 
-System Bootstrap, Version 17.6.1r[FC2], RELEASE SOFTWARE (P)
-Compiled Wed 05/12/2021 15:39:34.01 by rel
+System Bootstrap, Version 17.8.1r[FC2], RELEASE SOFTWARE (P)
+Compiled Thu 02/24/2022 22:45:03.07 by rel
 
 Current ROMMON image : Primary
 Last reset cause     : SoftwareReload
-C9300-24P platform with 8388608 Kbytes of main memory
+C9300-24T platform with 8388608 Kbytes of main memory
 
 boot: attempting to boot from [flash:packages.conf]
 boot: reading file packages.conf
 #
-#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+#############################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
 
 
 Both links down, not waiting for other switches
