@@ -355,6 +355,40 @@ Jun  8 23:44:53.063: %IOX-3-IOX_RESTARTABITLITY: R0/0: run_ioxn_caf: Stack is in
 Would you like to enter the initial configuration dialog? [yes/no]:
 
 
+
+
+
+
+...[SNIP]...
+
+
+
+
+
+Line 2 SUCCESS:  exit
+
+*** Configure cli2yang examples on device... ***
+*** Successfully configured cli2yang on device! ***
+
+ About to enable NETCONF API...
+
+
+
+ *** NETCONF API enabled... ***
+
+
+<?xml version="1.0" ?>
+<rpc-reply message-id="urn:uuid:daaa3709-49c6-437d-9f22-51f84aae8b6a" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+	<data>
+		<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+			<hostname>c9300-pod05</hostname>
+		</native>
+	</data>
+</rpc-reply>
+
+
+
+
 ```
 
 # Conclusion
