@@ -121,7 +121,7 @@ F1012 14:44:19.032795 2715507] Please provide a -target_name​
 ```
 
 
-# gnoi__reset and zero_fille
+# gnoi__reset and zero_fill
 
 
 The **gnoi_reset** tooling can be called with some options to specify the target address, target name, TLS options, and the use of the zero_fill option.
