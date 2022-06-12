@@ -26,9 +26,10 @@ Generate the JSON of the current running config using  `show run | format restco
 
 ![](./imgs/cli_to_json.gif)
 
-Notice the formatting of VLANs. Now, we'll use the JSON in a Terraform file to configure a new VLAN on a Catalyst 9300.
+1. Notice the formatting of VLANs. Now, we'll use the JSON in a Terraform file to configure a new VLAN on a Catalyst 9300.
+1. Navigate to the terraform directory `cd ~/terraform`
+1. Review the terraform.tf file to apply a new VLAN to the switch. `cat terraform.tf`, which will look similar to the following
 
-1. Add the terraform.tf file to your device to configure a switch.
 
 ### terraform.tf
 ```
