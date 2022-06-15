@@ -6,27 +6,7 @@ Terraform providers communicate with the desired resource. Typically, there are 
 
 Terraform is installed using the “apt” package management system. Running the Debian Package command, or dpkg, with the -L flag (list) shows which packages are installed on the system, including the Terraform tool.
 
-## CLI2YANG
-In Cisco IOS XE Cupertino 17.7.1 and later releases, you can automatically translate IOS commands into relevant NETCONF-YANG XML or RESTCONF-JSON request messages. You can analyze the generated configuration messages and familiarize with the Xpaths used in these messages. The generated configuration in the structured format can be used to provision other devices in the network; however, this configuration cannot be modified.
-
-## Retrieve running config on the device in CLI
-Review the CLI running configuration
-
-1. Review the running configuration in the good ole fashioned CLI using `show run`
-
-
-<!-- ## Retrieve running config formatted in XML for NETCONF
-Generate the XML of the current running config using `netconf-xml`
-
-![](./imgs/cli_to_xml.gif) -->
-
-
-## Retrieve run config formatted with JSON for RESTCONF
-Generate the JSON of the current running config using  `show run | format restconf-json`
-
-![](./imgs/cli_to_json.gif)
-
-1. Notice the formatting of VLANs. Now, we'll use the JSON in a Terraform file to configure a new VLAN on a Catalyst 9300.
+1. We'll use the JSON in a Terraform file to configure a new VLAN on a Catalyst 9300.
 1. Navigate to the terraform directory `cd ~/terraform` within the Linux VM
 1. Review the terraform.tf file to apply a new VLAN to the switch using the command `cat terraform.tf`, which will look similar to the following:
 
@@ -81,3 +61,36 @@ Now that the .tf file has been reviewed and is ready for use, the Terraform tool
 
 1. Note that the terraform provider has been executed if the message appears "Apply complete! Resources: 2 added, 0 changed, 0 destoyed."
 ![](./imgs/terraform_apply_complete.png)
+
+Next, let's create a new Terraform file in a new directory using the CLI2YANG feature described below.
+
+## CLI2YANG
+In Cisco IOS XE Cupertino 17.7.1 and later releases, you can automatically translate IOS commands into relevant NETCONF-YANG XML or RESTCONF-JSON request messages. You can analyze the generated configuration messages and familiarize with the Xpaths used in these messages. The generated configuration in the structured format can be used to provision other devices in the network; however, this configuration cannot be modified.
+
+## Retrieve running config on the device in CLI
+Review the CLI running configuration
+
+1. Review the running configuration in the good ole fashioned CLI using `show run`
+
+<!-- ## Retrieve running config formatted in XML for NETCONF
+Generate the XML of the current running config using `netconf-xml`
+
+![](./imgs/cli_to_xml.gif) -->
+
+
+## Retrieve run config formatted with JSON for RESTCONF
+Generate the JSON of the current running config using  `show run | format restconf-json`
+
+![](./imgs/cli_to_json.gif)
+
+
+Next, we can review the section of the output to find access-list
+
+![](./imgs/tf_acl.PNG)
+
+Let's create a new access list on our device using Terraform. Run the following commands in the Linux VM:
+1. Create a new directory `mkdir acl`
+2. Navigate into the new directory `cd acl`
+3. Copy the terraform.tf into a text editor such as Notepad
+4. Open the file in VI using `vi acl.tf`
+5. Add a new resource to the file by copying the first 
