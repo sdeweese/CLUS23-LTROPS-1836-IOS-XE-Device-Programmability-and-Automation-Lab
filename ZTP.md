@@ -44,9 +44,9 @@ print "\n\n *** ZTP Day0 Python Script Execution Complete *** \n\n"
 
 Check the interface IP assignments:
 
-> **auto@pod28-xelab:~$** ip a
->
-> **auto@pod28-xelab:~$** ip a | grep 10.1.1.3
+auto@automation:~$ ***ip a***
+
+auto@automation:~$ ***ip a | grep 10.1.1.3***
 
 ![](imgs/ip_a.png)
 
@@ -62,7 +62,7 @@ Examine the DHCP server configuration:
 
 Check the status of the DHCP service to ensure it is running correctly
 
-> **auto@pod28-xelab:~$** sudo /etc/init.d/isc-dhcp-server status
+> **auto@automation:~$** sudo /etc/init.d/isc-dhcp-server status
 
 
 ## Step 4:
@@ -70,7 +70,7 @@ Check the status of the DHCP service to ensure it is running correctly
 
 Check the status of the NGINX webserver to ensure it is running:
 
-> **auto@pod28-xelab:~$** /etc/init.d/nginx status
+> **auto@automation:~$** /etc/init.d/nginx status
 
 
 ## Step 5:
