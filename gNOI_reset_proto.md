@@ -34,7 +34,7 @@ gnxi server
 
 # Verify gNMI API Interface
 
-There are two show CLI's to help understand the state and status of gNMI and the gNOI microservies
+There are two show CLI's to help understand the state and status of gNMI and the gNOI microservices
 
 **show gnxi state**
 
