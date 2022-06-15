@@ -36,10 +36,12 @@ The screen should look similar to below:
 
 ![](./imgs/select_in_yang_suite.png)
 
-1. Click the blue "Build RPC" button
+1. Click the blue "Build RPC" button to ***generate*** the XML RPC that is based on the YANG model and inputs provided. The XML can be reviewed, edited, or used in other tooling or orchistration systems as needed
+
 ![](./imgs/build_rpc.png)
 
-1. Click the blue "Run RPC(s)" button
+1. Click the blue "Run RPC(s)" button to ***send*** the XML RPC to the switch's NETCONF Interface in order to retreive the config as requested
+
 1. In the new tab that's opened, notice the description of GigabitEthernet1/0/1 has changed. (note: you may need to scroll up)
 
 ## NETCONF: UPDATE interface (shutdown)
