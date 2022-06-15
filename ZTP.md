@@ -10,9 +10,9 @@ What is ZTP? When a device that supports Zero-Touch Provisioning boots up, and d
 ## Step 1:
 **ZTP Python File:** Review the `ztp-simple.py` file on the Ubuntu VM which is located at `/var/www/html`. This file uses the Python API to set the interface IP address, configure credentials and enables access to the device over the programmatic interfaces, as well as to configure some additional device features. From the Windows Jump Host desktop, onen a SSH session to the **Ubuntu** server and review the `ztp-simple.py` script:
 
-> **auto@automation:~$** less /var/www/html/ztp-simple.py
+> **auto@pod28-xelab:~$** cat /var/www/html/ztp-simple.py
 
-**Note** : The Python script with the POD environment may differ slightly
+**Note** : The Python script within the POD environment will be longer than the abridged version below, but the two will contain similar content
 
 ```Python
 print "\n\n *** Sample ZTP Day0 Python Script *** \n\n"
@@ -44,9 +44,9 @@ print "\n\n *** ZTP Day0 Python Script Execution Complete *** \n\n"
 
 Check the interface IP assignments:
 
-> **auto@automation:~$** ip a
+> **auto@pod28-xelab:~$** ip a
 >
-> **auto@automation:~$** ip a | grep 10.1.1.3
+> **auto@pod28-xelab:~$** ip a | grep 10.1.1.3
 
 ![](imgs/ip_a.png)
 
@@ -62,7 +62,7 @@ Examine the DHCP server configuration:
 
 Check the status of the DHCP service to ensure it is running correctly
 
-> **auto@automation:~$** sudo /etc/init.d/isc-dhcp-server status
+> **auto@pod28-xelab:~$** sudo /etc/init.d/isc-dhcp-server status
 
 
 ## Step 4:
@@ -70,7 +70,7 @@ Check the status of the DHCP service to ensure it is running correctly
 
 Check the status of the NGINX webserver to ensure it is running:
 
-> **auto@automation:~$** /etc/init.d/nginx status
+> **auto@pod28-xelab:~$** /etc/init.d/nginx status
 
 
 ## Step 5:
