@@ -131,7 +131,7 @@ On the Linux VM, run the following command to reset all of the configurations an
 
 `./gnoi_reset -target_addr 10.1.1.5:50052 -target_name dd -notls -zero_fill`
 
-A Message similar to this should appear: 
+A message similar to this should appear: 
 ***I1014 11:53:15.248633 2761247 gnoi_reset.go:59] Reset Called Successfully!***
 
 
