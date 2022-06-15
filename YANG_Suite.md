@@ -49,7 +49,7 @@ Make an API call that edits the interface to “shutdown”. (note: If you've co
     1. Protocol: “NETCONF”
     1. YANG Set: “c9300-default-yangset”
     1. Modules: “Cisco-IOS-XE-native”
-    1. Click “Load Modules”
+    1. Click “Load Modules” (*** NOTE: Please be patient! For about 2 mins)
     1. NETCONF Operation: “edit-config”
     1. Device: “c9300”
     1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
