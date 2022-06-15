@@ -26,6 +26,7 @@ In this example the gNMI API interface is enabled with the most basic and minima
 c9300-pod29# ***show run | i gnxi***
 
 We should see the following in the response from the show command:
+
 gnxi
 
 gnxi server
