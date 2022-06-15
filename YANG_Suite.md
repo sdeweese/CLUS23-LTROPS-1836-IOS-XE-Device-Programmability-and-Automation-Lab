@@ -1,11 +1,20 @@
 # YANG Suite
 [YANG Suite](https://github.com/CiscoDevNet/yangsuite) is HTML5 based tooling that is available for working with the YANG based programmable interfaces on Cisco IOS XE, XR, and NX Network Operating Systems. It has plugins that allow for interacting with the programmable interfaces and supports downloading YANG files directly from network devices. In this module, we will explore using NETCONF and RESTCONF to configure a switch and we will create a gRPC telemetry subscriptions.
 
+# Lab Overview
+
+This lab has multiple sections:
+
+1. NETCONF GET Gig Inteface config
+1. NETCONF Update interface into shut state
+1. NETCONF GET Loopback interface
+1. NETCONF Update interface description
+1. NETCONF Delete interface decription
+1. RESTCONF GET Loopback
+1. gRPC Telemetry
+
 ## NETCONF: GET Interface Descriptions 
 Using NETCONF, make an API call to the C9300 device to determine the description of an interface.
-
-# Lab Introduction
-To access the lab, you will need to SSH to the VM specific host. From the VM host you will have access to the switch and the remaining software dependencies for the lab. Please find below the actual lab environment and instructions. 
 
 
 1. Navigate to http://localhost:18480 in the browser. Note: Safari will not work because it uses HTTPS (rather than HTTP) by default.
