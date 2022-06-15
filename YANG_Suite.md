@@ -36,7 +36,7 @@ The screen should look similar to below:
 
 ![](./imgs/select_in_yang_suite.png)
 
-1. Click the blue "Build RPC" button to ***generate*** the XML RPC that is based on the YANG model and inputs provided. The XML can be reviewed, edited, or used in other tooling or orchistration systems as needed
+1. Click the blue "Build RPC" button to ***generate*** the XML RPC that is based on the YANG model and inputs provided. The XML can be reviewed, edited, or used in other tooling or orchestration systems as needed
 
 ![](./imgs/build_rpc.png)
 
