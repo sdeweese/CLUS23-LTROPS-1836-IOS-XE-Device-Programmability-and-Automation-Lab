@@ -20,7 +20,6 @@ Using NETCONF, make an API call to the C9300 device to determine the description
 1. Navigate to http://localhost:18480 in the browser. Note: Safari will not work because it uses HTTPS (rather than HTTP) by default.
 
 1. Select the following in YANG Suite
-![](./imgs/select_in_yang_suite.png)
 
     1. Protocol: “NETCONF”
     1. YANG Set: “c9300-default-yangset”
@@ -32,6 +31,11 @@ Using NETCONF, make an API call to the C9300 device to determine the description
     1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
     1. From within the "interface" dropdown, select "GigabitEthernet" (note: select CONTROL + F to find "GigabitEthernet" on the page)
     1. In the name section under "GigabitEthernet", add “1/0/1”
+
+The screen should look similar to below:
+
+![](./imgs/select_in_yang_suite.png)
+
 1. Click the blue "Build RPC" button
 ![](./imgs/build_rpc.png)
 
