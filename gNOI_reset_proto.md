@@ -2,7 +2,7 @@
 
 ## **Module: gNOI reset.proto "factory reset" API**
 
-## Version: Cisco IOS XE 17.7
+## Version: Cisco IOS XE 17.8
 
 ![](imgs/device_lifecycle.png)
 
@@ -14,21 +14,22 @@ The factory reset API as described at [openconfig/gnoi](https://github.com/openc
 
 This module describes the capabilities of the gnoi_reset tooling which is used to factory reset Cisco Catalyst IOS XE devices like the Catalyst 9300 used in this example.
 
-The console port is use to watch as the device completes the factory reset and reboots. As part of the Day 0 workflows the ZTP process will be used to automatically configure the C9300 switch back to a configured state where the API's are ready for use once again. ZTP is discussed in other modules.
+The console port is use to watch as the device completes the factory reset and reboots.
 
 ## Zero Touch Provisioning
-Once Factory reset is complete, we can use ZTP to add the necessary configurations to our device using NETCONF. To skip directly to learn more about ZTP, jump [here](ZTP.md).
+As part of the Day 0 workflows, the ZTP process will be used to automatically configure the C9300 switch back to a configured state where the API's are ready for use once again. Once Factory reset is complete, we can use ZTP to add the necessary configurations to our device using NETCONF. To skip directly to learn more about ZTP, jump [here](ZTP.md).
 
 # Enable the gNMI API Interface
 
 In this example the gNMI API interface is enabled with the most basic and minimal configuration. 
 
-c9300-pod29#show run | i gnxi
+c9300-pod29# ***show run | i gnxi***
 
-```
+We should see the following in the response from the show command:
 gnxi
+
 gnxi server
-```
+
 
 # Verify gNMI API Interface
 
@@ -106,42 +107,42 @@ GNOI
 
 # gnoi_reset tooling
 
-As with previous gNOI examples the tooling from Github.com/google/gnxi is used to work with the API. The gnoi_reset tooling is provided that enables testing and validation of the gNOI reset.proto API
+As with previous gNOI examples the tooling from Github.com/google/gnxi is used to work with the API. The gnoi_reset tooling is provided that enables testing and validation of the gNOI reset.proto APIs
 
 The tooling is installed using the **go get** and **go build** commands within the Linux environment. 
 
-```
-go get github.com/google/gnxi/gnoi_reset​
-
-go install github.com/google/gnxi/gnoi_reset​
-
-auto@pod24-xelab:~$ gnoi_reset​
-
-F1012 14:44:19.032795 2715507] Please provide a -target_name​
-```
+The following commands to get have already been done for you to set up gNOI.reset on the Linux VM:
 
 
-# gnoi__reset and zero_fill
+***go get github.com/google/gnxi/gnoi_reset​***
 
+***go install github.com/google/gnxi/gnoi_reset​***
+
+
+# gnoi_reset and zero_fill
+
+gNOI_reset clears all of the configurations on the disk of the Catatlyst 9000 and resets the device back to factory settings.
 
 The **gnoi_reset** tooling can be called with some options to specify the target address, target name, TLS options, and the use of the zero_fill option.
 
-Zero Fill is the process that instructs the target device to zero fill the persistent storage state data. All sectors on the disk are overwritten with zero's so data is notaccessible after the operation. 
+Zero Fill is the process that instructs the target device to zero fill the persistent storage state data. All sectors on the disk are overwritten with zero's so data is found after the operation. 
+
+On the Linux VM, run the following command to reset all of the configurations and disk back to factory settings:
+
+`./gnoi_reset -target_addr 10.1.1.5:50052 -target_name dd -notls -zero_fill`
+
+A Message similar to this should appear: 
+***I1014 11:53:15.248633 2761247 gnoi_reset.go:59] Reset Called Successfully!***
 
 
-```
-auto@pod24-xelab:~$ ./gnoi_reset -target_addr 10.1.1.5:50052 -target_name dd -notls -zero_fill
-I1014 11:53:15.248633 2761247 gnoi_reset.go:59] Reset Called Successfully!
-auto@pod24-xelab:~$
-```
-
- # ZTP Break
-This will take a few minutes. In the meantime, review how to set up [ZTP](ZTP.md)
+It will take the switch about 5 minutes to reload. To see an example of what that will look like, see the output below. In the meantime, review how to set up and use [ZTP](ZTP.md). Once the switch comes back up, we will automatically apply the changes in ZTP.
 
 # Console log
 
 When the gnoi_reset factor reset operation is called then the device will go down for factory reset. The follow is displayed onto the serial console of the device which captures the log messages and shows the progress as the device is zero_filled and reset.
 
+
+NOTE: the following out put is simply shown for reference
 
 ```
 C9300#
@@ -356,12 +357,7 @@ Would you like to enter the initial configuration dialog? [yes/no]:
 
 
 
-
-
-
 ...[SNIP]...
-
-
 
 
 
@@ -385,10 +381,6 @@ Line 2 SUCCESS:  exit
 		</native>
 	</data>
 </rpc-reply>
-
-
-
-
 ```
 
 # Conclusion

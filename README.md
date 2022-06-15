@@ -2,22 +2,66 @@
 
 ### This lab guide serves as the Cisco Live US (Las Vegas) Programmability and Automation Lab with Catalyst IOS XE Platforms session LTROPS-1836
 
-
 # Lab Introduction
-To access the lab, you will need to use a Remote Desktop connection to the specific jump host. The jump host is used to allow remotes access into all lab devices within the given pod envrionment.
+To access the lab, you will need to SSH to the VM specific host. From the VM host you will have access to the switch and the remaining software dependencies for the lab. Please find below the actual lab environment and instructions. 
 
-The services, features, and technologies that are enabled with the lab envrionment are shown below:
 
-![](./imgs/pod_details.png)
+# Lab environment
+![](./imgs/lab_env.png)
 
-The modules below enable IOS XE Device Lifecycle Management:
 
-![](./imgs/device_lifecycle.png)
+# Accessing the lab environment 
+
+1. Identify your pod#.
+ 
+2. Open two terminal windows and SSH to both. One window will be used to configure the VM. The second window is for telnet access into the C9300.
+
+3. To SSH into the devices, copy/paste the below line into each of the terminal sessions. Replace the ## symbol on the SSH command with your pod number. Use the password given to you by the facilitator.
+
+```ssh -p 3389 -L 18480:localhost:8480 -L 13000:localhost:3000 auto@pod##-xelab.cisco.com```
+
+Once you logged into the VM, the first time you login, you'll see this question:
+
+`Are you sure you want to continue connecting (yes/no/[fingerprint])?` 
+
+Type, `yes` to continue 
+
+After you approve the entry you should be able to see the following prompt:
+
+![](pod_login.png)
+
+ADD EXAMPLE LOGIN SCREEN SHOT HERE
+
+
+4. Telnet into the Catalyst 9300 into the second window that you opened before. Use the following credentials: admin / Cisco123
+
+![](telnet-gnmi-show.png)
+
+ADD EXAMPLE c9000 login SCREEN SHOT HERE
+
+
+5. Once you finished accesing via SSH and telnet into the VM and the switch respectively, this is how you should see them:
+![](vm_c9300_terminals.png)
+
+ADD EXAMPLE linux VM + c9000 login SCREEN SHOT HERE
+
+
+# Accessing the Lab
+Identify your pod# and log into your respective pod# using SSH once opening the Terminal from the bottom left corner.
+
+Note: Use your pod number instead of the ## symbol for the SSH command
+
+Copy/Paste the below line into the terminal. We recommend to open two terminal windows and login to both at the same time. One will be used for the VM while the other is dedicated for use on the C9300 switch.
+
+`ssh -p 3389 -L 18480:localhost:8480 -L 13000:localhost:3000 auto@pod##-xelab.cisco.com`
+
+Password: Use the password given to you by the facilitator
+
+Once you logged into the VM, the first time you login, you'll see this question: `Are you sure you want to continue connecting (yes/no/[fingerprint])?` Type, `yes` to continue
 
 # Lab Modules
 
 Lab modules can be completed in any order. Mark the lab completed in the [SmartSheet](https://app.smartsheet.com/b/form/134240eac2d84a57acd4efc24fd8f3d0) form once you have successfully completed each module. 
-
 
 ## [gNOI reset.proto and ZTP Module](gNOI_reset_proto.md)
 Reset.proto also known as the Factory Reset API is the latest addition to the gNOI operations interface within the gNMI. 
@@ -27,10 +71,8 @@ The factory reset API as described at [openconfig/gnoi](https://github.com/openc
 Use the NETCONF API with Guest Shell to create the base configurations for a switch to [implement Zero Touch Provisioning](ZTP.md).
 
 
-
 ## [YANG Suite Module](YANG_Suite.md)
 [YANG Suite](https://github.com/CiscoDevNet/yangsuite) is HTML5 based tooling that is available for working with the YANG based programmable interfaces on Cisco IOS XE, XR, and NX Network Operating Systems. It has plugins that allow for interacting with the programmable interfaces and supports downloading YANG files directly from network devices. In this module, we will explore using NETCONF and RESTCONF to configure a switch and we will create a gRPC telemetry subscriptions.
-
 
 
 ## [Secure Streaming Telemetry Module](https://github.com/guaguila/CLive2022_DEVWKS-3240)

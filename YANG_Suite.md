@@ -4,11 +4,11 @@
 ## NETCONF: GET Interface Descriptions 
 Using NETCONF, make an API call to the C9300 device to determine the description of an interface.
 
-1. Login to the pod using RDP <br />
-![](./imgs/login_using_rdp.png)
+# Lab Introduction
+To access the lab, you will need to SSH to the VM specific host. From the VM host you will have access to the switch and the remaining software dependencies for the lab. Please find below the actual lab environment and instructions. 
 
-1. Within the pod, navigate to http://localhost:8480 or select the short cut in the Firefox browser
-![](./imgs/navigate_to_yang_suite.png)
+
+1. Navigate to http://localhost:18480 in the browser. Note: Safari will not work because it uses HTTPS (rather than HTTP) by default.
 
 1. Select the following in YANG Suite
 ![](./imgs/select_in_yang_suite.png)
