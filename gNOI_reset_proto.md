@@ -114,7 +114,6 @@ The tooling is installed using the **go get** and **go build** commands within t
 
 The following commands to get have already been done for you to set up gNOI.reset on the Linux VM:
 
-
 ***go get github.com/google/gnxi/gnoi_reset​***
 
 ***go install github.com/google/gnxi/gnoi_reset​***
@@ -137,8 +136,6 @@ A Message similar to this should appear:
 
 
 It will take the switch about 5 minutes to reload. To see an example of what that will look like, see the output below. In the meantime, review how to set up and use [ZTP](ZTP.md). Once the switch comes back up, we will automatically apply the changes in ZTP.
-
-# Console log
 
 When the gnoi_reset factor reset operation is called then the device will go down for factory reset. The follow is displayed onto the serial console of the device which captures the log messages and shows the progress as the device is zero_filled and reset.
 
