@@ -23,9 +23,10 @@ As part of the Day 0 workflows, the ZTP process will be used to automatically co
 
 In this example the gNMI API interface is enabled with the most basic and minimal configuration. 
 
-c9300-pod29# ***show run | i gnxi***
+c9300-pod28# ***show run | i gnxi***
 
 We should see the following in the response from the show command:
+
 gnxi
 
 gnxi server
@@ -33,7 +34,7 @@ gnxi server
 
 # Verify gNMI API Interface
 
-There are two show CLI's to help understand the state and status of gNMI and the gNOI microservies
+There are two show CLI's to help understand the state and status of gNMI and the gNOI microservices
 
 **show gnxi state**
 
