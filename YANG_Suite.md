@@ -167,5 +167,5 @@ Make an API call to get the interface description.
 
 
 ## Learn more about YANG Suite
-- [YANG Suite TDM](https://salesconnect.cisco.com/#/content-detail/8cc604e2-8903-4164-a4c4-24007b5d9735)
+- [YANG Suite on GitHub](https://github.com/CiscoDevNet/yangsuite)
 - [YouTube Demo](https://youtu.be/smrhjL5Ayz0)

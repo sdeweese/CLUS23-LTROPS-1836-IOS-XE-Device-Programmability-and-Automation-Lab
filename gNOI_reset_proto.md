@@ -139,10 +139,10 @@ It will take the switch about 5 minutes to reload. To see an example of what tha
 
 # Console log
 
-When the gnoi_reset factor reset operation is called then the device will go down for factory reset. The follow is displayed onto the serial console of the device which captures the log messages and shows the progress as the device is zero_filled and reset.
+When the gnoi_reset factor reset operation is called then the device will go down for factory reset. The follow is displayed onto the serial console of the device which captures the log messages and shows the progress as the device is zero-filled and reset.
 
 
-NOTE: the following out put is simply shown for reference
+NOTE: the following output is simply shown for reference
 
 ```
 C9300#

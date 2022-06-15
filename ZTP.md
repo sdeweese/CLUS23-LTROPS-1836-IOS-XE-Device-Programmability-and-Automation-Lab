@@ -10,7 +10,7 @@ What is ZTP? When a device that supports Zero-Touch Provisioning boots up, and d
 ## Step 1:
 **ZTP Python File:** Review the `ztp-simple.py` file on the Ubuntu VM which is located at `/var/www/html`. This file uses the Python API to set the interface IP address, configure credentials and enables access to the device over the programmatic interfaces, as well as to configure some additional device features. From the Windows Jump Host desktop, onen a SSH session to the **Ubuntu** server and review the `ztp-simple.py` script:
 
-> **auto@automation:~$** less /var/www/html/ztp-simple.py
+> **auto@automation:~$** cat /var/www/html/ztp-simple.py
 
 **Note** : The Python script with the POD environment may differ slightly
 
@@ -74,7 +74,7 @@ Check the status of the NGINX webserver to ensure it is running:
 
 
 ## Step 5:
-**IOS XE Device:** Now the prerequisites for ZTP are met and the device is ready to be reloaded once the previous configuration is removed – this is to ensure that the Day0 ZTP process is initialized once the switch boots. This emulates a new, un-configured device that is ready to provisioned.
+**IOS XE Device:** Now the prerequisites for ZTP are met and the device will use these configurations once it's reloaded to ensure that the Day 0 ZTP process is initialized once the switch boots. This emulates a new, un-configured device that is ready to provisioned.
 
 ## Conclusion
 The Cisco IOS XE Catalyst 9300 switch will  successfully completed the Zero Touch Provisioning process and and be fully configured on the network. Because of the pre-configuration within the ztp-simple.py file, all use cases for the related IOS XE Programmability Lab have been enabled. Specifically, the switch has an IP, username/password, SSH access enabled, and the programmatic NETCONF and RESTCONF interfaces have also been configured and enabled.
