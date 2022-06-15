@@ -27,7 +27,7 @@ Using NETCONF, make an API call to the C9300 device to determine the description
     1. Click the blue “Load Modules” button
     1. NETCONF Operation: “get-config”
     1. Device: “c9300”
-    1. Wait for the tree to appear in the grey box on the left. (note: if you get an Error 500 popup, it's because the tree has not yet loaded. The tree must be loaded for the following steps. It takes a few minutes for the Native YANG module to load, wait a minute until the tree view is loaded)
+    1. Wait for the tree to appear in the grey box on the left. (note: if you get an Error 500 popup, just ignore it and close the popup.
     1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
     1. From within the "interface" dropdown, select "GigabitEthernet" (note: select CONTROL + F to find "GigabitEthernet" on the page)
     1. In the name section under "GigabitEthernet", add “1/0/1”
@@ -60,6 +60,7 @@ Make an API call that edits the interface to “shutdown”. (note: If you've co
     1. Select “Build RPC”
     1. Select “Run RPC”
 ![](./imgs/run_rpc.png)
+
 
 ## NETCONF: GET Loopback0
 Make an API call to get the Loopback0.
