@@ -114,8 +114,7 @@ Make an API call to delete the interface description.
 1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
 1. From within the "interface" dropdown, select "Loopback" (note: select CONTROL + F to find "Loopback" on the page)
 1. In the name section under "Loopback", add "1" 
-1. Select "description" and add the same string of text that you used in the last step.
-3. Click on the right of the textbox wth the description to expand the dropdown menu. Select "delete" from the dropdown
+1. Select "description" and click on the right of the textbox wth the description string to expand the dropdown menu. Select "delete" from the dropdown.
 4. Select “Clear RPC” to remove any previous RPC
 5. Select “Build RPC”
 6. Select “Run RPC”
