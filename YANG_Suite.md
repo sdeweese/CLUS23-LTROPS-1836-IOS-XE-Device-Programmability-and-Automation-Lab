@@ -113,10 +113,11 @@ Make an API call to delete the interface description.
 1. Device: "c9300"
 1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
 1. From within the "interface" dropdown, select "Loopback" (note: select CONTROL + F to find "Loopback" on the page)
-1. In the name section under "Loopback", add “1”
-1. Select “Clear RPC” to remove any previous RPC
-1. Select “Build RPC”
-1. Select “Run RPC”
+1. In the name section under "Loopback", add the name "Configured by YANG Suite"
+2. Click on the right of the textbox wth the hostname to expand the dropdown menu. Select "delete" from the dropdown
+4. Select “Clear RPC” to remove any previous RPC
+5. Select “Build RPC”
+6. Select “Run RPC”
 ![](./imgs/delete_interface_description.png)
 
 ## RESTCONF: GET Loopback Mask
@@ -183,5 +184,10 @@ Make an API call to get the interface description.
 
 
 ## Learn more about YANG Suite
-- [YANG Suite TDM](https://salesconnect.cisco.com/#/content-detail/8cc604e2-8903-4164-a4c4-24007b5d9735)
-- [YouTube Demo](https://youtu.be/smrhjL5Ayz0)
+- [YANG Suite GitHub](https://github.com/CiscoDevNet/yangsuite)
+- [YANG Suite on DevNet](https://developer.cisco.com/yangsuite/)
+
+## YANG Suite Videos
+- [Getting started with Cisco YANG Suite](https://youtu.be/smrhjL5Ayz0)
+- [All YANG Suite, all the time, DevNet Snack Minute, Episode 9](https://www.youtube.com/watch?v=3zmNDfn8b38)
+- [NETCONF with YANG Suite](https://www.youtube.com/watch?v=dTun33611JA)
