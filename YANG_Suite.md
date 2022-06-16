@@ -146,7 +146,7 @@ Make an API call to get the interface description.
 ![](./imgs/close_popup.png)
 
 1. Click the blue “Show API(s)” button
-1. Select the link next to the "GET" operation
+1. Select the link next to the "GET" operation corresponding to the API call "/data/Cisco-IOS-XE-native:native/interface/Loopback"
 1. Click the "Try it out" button
 ![](./imgs/try_it_out.png)
 1. Click the "Execute" button to send the RESTCONF payload and view the reply, including the Loopback Netmask
