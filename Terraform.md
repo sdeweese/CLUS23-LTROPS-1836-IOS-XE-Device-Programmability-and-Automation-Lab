@@ -31,7 +31,7 @@ provider "iosxe" {
 resource "iosxe_rest" "vlan_example_put" {
   method = "PUT"
   path = "/data/Cisco-IOS-XE-native:native/vlan/vlan-list=511"
-  payload = jsonencode(
+  payload = c(
     {
     "Cisco-IOS-XE-vlan:vlan-list": {
           "id": "511",
@@ -83,14 +83,17 @@ Generate the JSON of the current running config using  `show run | format restco
 
 ![](./imgs/cli_to_json.gif)
 
+We can use this restconf-json formmatting to build out additional information to add to the jsoncode section of the Terraform RESTCONF payload
 
-Next, we can review the section of the output to find access-list
+
+<!-- Next, we can review the section of the output to find access-list
 
 ![](./imgs/tf_acl.PNG)
 
 Let's create a new access list on our device using Terraform. Run the following commands in the Linux VM:
 1. Create a new directory `mkdir acl`
 2. Navigate into the new directory `cd acl`
-3. Copy the terraform.tf into a text editor such as Notepad
-4. Open the file in VI using `vi acl.tf`
-5. Add a new resource to the file by copying the first 
+3. Copy the terraform.tf into a text editor such as Notepad. We'll modify this file 
+5. Add a new resource to the file by copying text within the output of ACL in the restconf-json output above
+6. Once the files is ready, 
+ -->
