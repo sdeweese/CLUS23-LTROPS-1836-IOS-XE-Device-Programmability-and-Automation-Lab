@@ -93,7 +93,9 @@ For further reading, check out this Cisco blog going in-depth with the inner too
 The official Cisco DevNet Github repository for Terraform contains more examples on how to leverage Terraform to automate network setups: https://github.com/CiscoDevNet/terraform-provider-iosxe/tree/main/examples
 
 Thank you for completing the Terraform module of the programmability and automation lab!
-![image](https://user-images.githubusercontent.com/99450278/174127740-eedbde89-ed22-4611-b39e-eeb2dc8c2e06.png)
+
+
+![image](https://user-images.githubusercontent.com/99450278/174128254-6f6bcbc7-a680-4567-abcc-85bdbe7b6eb2.png)
 
 
 
