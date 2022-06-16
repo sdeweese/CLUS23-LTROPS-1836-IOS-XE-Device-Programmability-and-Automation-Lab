@@ -96,7 +96,7 @@ Make an API call that edits the Loopback0 interface description.
 1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
 1. From within the "interface" dropdown, select "Loopback" (note: select CONTROL + F to find "Loopback" on the page)
 1. In the name section under "Loopback", add “1”
-1. elect “description” and add a string of text such as “Configured by YANG Suite”
+1. Select “description” and add a string of text such as “Configured by YANG Suite”
 1. Select “Clear RPC” to remove any previous RPC
 1. Select “Build RPC”
 1. Select “Run RPC”
@@ -113,8 +113,9 @@ Make an API call to delete the interface description.
 1. Device: "c9300"
 1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
 1. From within the "interface" dropdown, select "Loopback" (note: select CONTROL + F to find "Loopback" on the page)
-1. In the name section under "Loopback", add the name "Configured by YANG Suite"
-2. Click on the right of the textbox wth the hostname to expand the dropdown menu. Select "delete" from the dropdown
+1. In the name section under "Loopback", add "1" 
+1. Select "description" and add the same string of text that you used in the last step.
+3. Click on the right of the textbox wth the description to expand the dropdown menu. Select "delete" from the dropdown
 4. Select “Clear RPC” to remove any previous RPC
 5. Select “Build RPC”
 6. Select “Run RPC”
