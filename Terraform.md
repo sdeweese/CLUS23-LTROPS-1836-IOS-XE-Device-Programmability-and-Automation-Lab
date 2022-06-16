@@ -95,7 +95,7 @@ The official Cisco DevNet Github repository for Terraform contains more examples
 Thank you for completing the Terraform module of the programmability and automation lab!
 
 
-<img src="https://user-images.githubusercontent.com/99450278/174128520-4be78316-8248-4883-ba18-bfea52467459.png" width="200">
+<img src="https://user-images.githubusercontent.com/99450278/174128520-4be78316-8248-4883-ba18-bfea52467459.png" width="400">
 
 
 
