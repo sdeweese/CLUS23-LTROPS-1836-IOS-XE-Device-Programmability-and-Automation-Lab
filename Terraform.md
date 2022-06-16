@@ -55,7 +55,7 @@ Now that the .tf file has been reviewed and is ready for use, the Terraform tool
 ![](./imgs/terraform.gif)
 
 
-1. Initialize Terraform with `terraform init`
+1. In the terminal window where you are SSH'd into the Ubuntu host, initialize Terraform with the command `terraform init`
 1. Apply the configuration with the terraform apply command `terraform apply -auto-approve`
 ![](./imgs/terraform_init_and_apply.png)
 
