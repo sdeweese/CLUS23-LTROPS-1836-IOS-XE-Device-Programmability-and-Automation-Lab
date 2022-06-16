@@ -70,7 +70,7 @@ In Cisco IOS XE Cupertino 17.7.1 and later releases, you can automatically trans
 ## Retrieve running config on the device in CLI
 Review the CLI running configuration
 
-1. Review the running configuration in the good ole fashioned CLI using `show run`
+1. Review the running configuration in the good ol' fashioned CLI using `show run`
 
 <!-- ## Retrieve running config formatted in XML for NETCONF
 Generate the XML of the current running config using `netconf-xml`
@@ -83,7 +83,18 @@ Generate the JSON of the current running config using  `show run | format restco
 
 ![](./imgs/cli_to_json.gif)
 
-We can use this restconf-json formmatting to build out additional information to add to the jsoncode section of the Terraform RESTCONF payload
+We can use this restconf-json formmatting to build out additional information to add to the jsoncode section of the Terraform RESTCONF payload.
+
+## Review
+This has been just a short introduction into the vast possibilities for automating your network setup using Terraform. By using a simple, JSON-like configuration file, we were able to set up and configure a VLAN on our Catalyst 9300. Any configuration setting that can be configured using RESTCONF can be set and automated leveraging the power of Terraform. Terraform can also be used to automate setting up the configurations on entire networks of Cisco devices.
+
+For further reading, check out this Cisco blog going in-depth with the inner tooling of Terraform, and how it can be used to automate IOS-XE devices: https://blogs.cisco.com/developer/terraformiosxe01
+
+The official Cisco DevNet Github repository for Terraform contains more examples on how to leverage Terraform to automate network setups: https://github.com/CiscoDevNet/terraform-provider-iosxe/tree/main/examples
+
+Thank you for completing the Terraform module of the programmability and automation lab!
+![image](https://user-images.githubusercontent.com/99450278/174127740-eedbde89-ed22-4611-b39e-eeb2dc8c2e06.png)
+
 
 
 <!-- Next, we can review the section of the output to find access-list
