@@ -108,7 +108,7 @@ GNOI
 
 # gnoi_reset tooling
 
-As with previous gNOI examples the tooling from Github.com/google/gnxi is used to work with the API. The gnoi_reset tooling is provided that enables testing and validation of the gNOI reset.proto APIs
+As with previous gNOI examples the tooling from [Github.com/google/gnxi](Github.com/google/gnxi) is used to work with the API. The provided gnoi_reset tooling enables testing and validation of the gNOI reset.proto APIs.
 
 The tooling is installed using the **go get** and **go build** commands within the Linux environment. 
 
