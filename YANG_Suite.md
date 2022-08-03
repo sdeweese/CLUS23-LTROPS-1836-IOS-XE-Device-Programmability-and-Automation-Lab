@@ -1,17 +1,25 @@
 # YANG Suite
 [YANG Suite](https://github.com/CiscoDevNet/yangsuite) is HTML5 based tooling that is available for working with the YANG based programmable interfaces on Cisco IOS XE, XR, and NX Network Operating Systems. It has plugins that allow for interacting with the programmable interfaces and supports downloading YANG files directly from network devices. In this module, we will explore using NETCONF and RESTCONF to configure a switch and we will create a gRPC telemetry subscriptions.
 
+# Lab Overview
+
+This lab has multiple sections:
+
+1. NETCONF GET Gig Inteface config
+1. NETCONF Update interface into shut state
+1. NETCONF GET Loopback interface
+1. NETCONF Update interface description
+1. NETCONF Delete interface decription
+1. RESTCONF GET Loopback
+1. gRPC Telemetry
+
 ## NETCONF: GET Interface Descriptions 
 Using NETCONF, make an API call to the C9300 device to determine the description of an interface.
-
-# Lab Introduction
-To access the lab, you will need to SSH to the VM specific host. From the VM host you will have access to the switch and the remaining software dependencies for the lab. Please find below the actual lab environment and instructions. 
 
 
 1. Navigate to http://localhost:18480 in the browser. Note: Safari will not work because it uses HTTPS (rather than HTTP) by default.
 
 1. Select the following in YANG Suite
-![](./imgs/select_in_yang_suite.png)
 
     1. Protocol: “NETCONF”
     1. YANG Set: “c9300-default-yangset”
@@ -19,14 +27,21 @@ To access the lab, you will need to SSH to the VM specific host. From the VM hos
     1. Click the blue “Load Modules” button
     1. NETCONF Operation: “get-config”
     1. Device: “c9300”
-    1. Wait for the tree to appear in the grey box on the left. (note: if you get an Error 500 popup, it's because the tree has not yet loaded. The tree must be loaded for the following steps. It takes a few minutes for the Native YANG module to load, wait a minute until the tree view is loaded)
+    1. Wait for the tree to appear in the grey box on the left. (note: if you get an Error 500 popup, just ignore it and close the popup.)
     1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
     1. From within the "interface" dropdown, select "GigabitEthernet" (note: select CONTROL + F to find "GigabitEthernet" on the page)
-    1. In the name section under "GigabitEthernet", add “1/0/1”
-1. Click the blue "Build RPC" button
+    1. In the ***"name"*** section under "GigabitEthernet", add ***“1/0/1”***
+
+The screen should look similar to below:
+
+![](./imgs/select_in_yang_suite.png)
+
+1. Click the blue "Build RPC" button to ***generate*** the XML RPC that is based on the YANG model and inputs provided. The XML can be reviewed, edited, or used in other tooling or orchestration systems as needed
+
 ![](./imgs/build_rpc.png)
 
-1. Click the blue "Run RPC(s)" button
+1. Click the blue "Run RPC(s)" button to ***send*** the XML RPC to the switch's NETCONF Interface in order to retreive the config as requested
+
 1. In the new tab that's opened, notice the description of GigabitEthernet1/0/1 has changed. (note: you may need to scroll up)
 
 ## NETCONF: UPDATE interface (shutdown)
@@ -36,7 +51,7 @@ Make an API call that edits the interface to “shutdown”. (note: If you've co
     1. Protocol: “NETCONF”
     1. YANG Set: “c9300-default-yangset”
     1. Modules: “Cisco-IOS-XE-native”
-    1. Click “Load Modules”
+    1. Click “Load Modules” (*** NOTE: Please be patient! For about 2 mins)
     1. NETCONF Operation: “edit-config”
     1. Device: “c9300”
     1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
@@ -47,6 +62,7 @@ Make an API call that edits the interface to “shutdown”. (note: If you've co
     1. Select “Build RPC”
     1. Select “Run RPC”
 ![](./imgs/run_rpc.png)
+
 
 ## NETCONF: GET Loopback0
 Make an API call to get the Loopback0.
@@ -80,7 +96,7 @@ Make an API call that edits the Loopback0 interface description.
 1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
 1. From within the "interface" dropdown, select "Loopback" (note: select CONTROL + F to find "Loopback" on the page)
 1. In the name section under "Loopback", add “1”
-1. elect “description” and add a string of text such as “Configured by YANG Suite”
+1. Select “description” and add a string of text such as “Configured by YANG Suite”
 1. Select “Clear RPC” to remove any previous RPC
 1. Select “Build RPC”
 1. Select “Run RPC”
@@ -97,10 +113,11 @@ Make an API call to delete the interface description.
 1. Device: "c9300"
 1. Once the YANG tree is created, select "interface" (note: select CONTROL + F to find "interface" on the page)
 1. From within the "interface" dropdown, select "Loopback" (note: select CONTROL + F to find "Loopback" on the page)
-1. In the name section under "Loopback", add “1”
-1. Select “Clear RPC” to remove any previous RPC
-1. Select “Build RPC”
-1. Select “Run RPC”
+1. In the name section under "Loopback", add "1" 
+1. Select "description" and click on the right of the textbox wth the description string to expand the dropdown menu. Select "delete" from the dropdown.
+4. Select “Clear RPC” to remove any previous RPC
+5. Select “Build RPC”
+6. Select “Run RPC”
 ![](./imgs/delete_interface_description.png)
 
 ## RESTCONF: GET Loopback Mask
@@ -129,7 +146,7 @@ Make an API call to get the interface description.
 ![](./imgs/close_popup.png)
 
 1. Click the blue “Show API(s)” button
-1. Select the link next to the "GET" operation
+1. Select the link next to the "GET" operation corresponding to the API call "/data/Cisco-IOS-XE-native:native/interface/Loopback"
 1. Click the "Try it out" button
 ![](./imgs/try_it_out.png)
 1. Click the "Execute" button to send the RESTCONF payload and view the reply, including the Loopback Netmask
@@ -167,5 +184,15 @@ Make an API call to get the interface description.
 
 
 ## Learn more about YANG Suite
+<<<<<<< HEAD
 - [YANG Suite on GitHub](https://github.com/CiscoDevNet/yangsuite)
 - [YouTube Demo](https://youtu.be/smrhjL5Ayz0)
+=======
+- [YANG Suite GitHub](https://github.com/CiscoDevNet/yangsuite)
+- [YANG Suite on DevNet](https://developer.cisco.com/yangsuite/)
+
+## YANG Suite Videos
+- [Getting started with Cisco YANG Suite](https://youtu.be/smrhjL5Ayz0)
+- [All YANG Suite, all the time, DevNet Snack Minute, Episode 9](https://www.youtube.com/watch?v=3zmNDfn8b38)
+- [NETCONF with YANG Suite](https://www.youtube.com/watch?v=dTun33611JA)
+>>>>>>> 8f1427d4543ba387688b1b512a644483dd1acd58

@@ -10,7 +10,7 @@
 
 Reset.proto also known as the Factory Reset API is the latest addition to the gNOI operations interface within the gNMI.
 
-The factory reset API as described at [openconfig/gnoi](https://github.com/openconfig/gnoi/blob/master/factory_reset/​) with tooling from [google/gnxi](https://github.com/google/gnxi/tree/master/gnoi_reset).
+The factory reset API as described at [openconfig/gnoi](https://github.com/openconfig/gnoi/tree/master/factory_reset) with tooling from [google/gnxi](https://github.com/google/gnxi/tree/master/gnoi_reset).
 
 This module describes the capabilities of the gnoi_reset tooling which is used to factory reset Cisco Catalyst IOS XE devices like the Catalyst 9300 used in this example.
 
@@ -23,9 +23,10 @@ As part of the Day 0 workflows, the ZTP process will be used to automatically co
 
 In this example the gNMI API interface is enabled with the most basic and minimal configuration. 
 
-c9300-pod29# ***show run | i gnxi***
+c9300-pod28# ***show run | i gnxi***
 
 We should see the following in the response from the show command:
+
 gnxi
 
 gnxi server
@@ -33,7 +34,7 @@ gnxi server
 
 # Verify gNMI API Interface
 
-There are two show CLI's to help understand the state and status of gNMI and the gNOI microservies
+There are two show CLI's to help understand the state and status of gNMI and the gNOI microservices
 
 **show gnxi state**
 
@@ -107,12 +108,11 @@ GNOI
 
 # gnoi_reset tooling
 
-As with previous gNOI examples the tooling from Github.com/google/gnxi is used to work with the API. The gnoi_reset tooling is provided that enables testing and validation of the gNOI reset.proto APIs
+As with previous gNOI examples the tooling from [Github.com/google/gnxi](Github.com/google/gnxi) is used to work with the API. The provided gnoi_reset tooling enables testing and validation of the gNOI reset.proto APIs.
 
 The tooling is installed using the **go get** and **go build** commands within the Linux environment. 
 
 The following commands to get have already been done for you to set up gNOI.reset on the Linux VM:
-
 
 ***go get github.com/google/gnxi/gnoi_reset​***
 
@@ -131,15 +131,17 @@ On the Linux VM, run the following command to reset all of the configurations an
 
 `./gnoi_reset -target_addr 10.1.1.5:50052 -target_name dd -notls -zero_fill`
 
-A Message similar to this should appear: 
+A message similar to this should appear: 
 ***I1014 11:53:15.248633 2761247 gnoi_reset.go:59] Reset Called Successfully!***
 
 
 It will take the switch about 5 minutes to reload. To see an example of what that will look like, see the output below. In the meantime, review how to set up and use [ZTP](ZTP.md). Once the switch comes back up, we will automatically apply the changes in ZTP.
 
-# Console log
+When the gnoi_reset factor reset operation is called then the device will go down for factory reset. The follow is displayed onto the serial console of the device which captures the log messages and shows the progress as the device is zero_filled and reset.
 
-When the gnoi_reset factor reset operation is called then the device will go down for factory reset. The follow is displayed onto the serial console of the device which captures the log messages and shows the progress as the device is zero-filled and reset.
+Enter the serial console on the Linux VM using the following: `console-helper`
+
+
 
 
 NOTE: the following output is simply shown for reference

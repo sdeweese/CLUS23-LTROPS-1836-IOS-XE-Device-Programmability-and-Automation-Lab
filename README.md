@@ -28,36 +28,16 @@ Type, `yes` to continue
 
 After you approve the entry you should be able to see the following prompt:
 
-![](pod_login.png)
-
-ADD EXAMPLE LOGIN SCREEN SHOT HERE
+![](./imgs/pod_login.PNG)
 
 
 4. Telnet into the Catalyst 9300 into the second window that you opened before. Use the following credentials: admin / Cisco123
 
-![](telnet-gnmi-show.png)
-
-ADD EXAMPLE c9000 login SCREEN SHOT HERE
-
+![](./imgs/switch_login.PNG)
 
 5. Once you finished accesing via SSH and telnet into the VM and the switch respectively, this is how you should see them:
-![](vm_c9300_terminals.png)
 
-ADD EXAMPLE linux VM + c9000 login SCREEN SHOT HERE
-
-
-# Accessing the Lab
-Identify your pod# and log into your respective pod# using SSH once opening the Terminal from the bottom left corner.
-
-Note: Use your pod number instead of the ## symbol for the SSH command
-
-Copy/Paste the below line into the terminal. We recommend to open two terminal windows and login to both at the same time. One will be used for the VM while the other is dedicated for use on the C9300 switch.
-
-`ssh -p 3389 -L 18480:localhost:8480 -L 13000:localhost:3000 auto@pod##-xelab.cisco.com`
-
-Password: Use the password given to you by the facilitator
-
-Once you logged into the VM, the first time you login, you'll see this question: `Are you sure you want to continue connecting (yes/no/[fingerprint])?` Type, `yes` to continue
+![](./imgs/vm_c9300_terminals.PNG)
 
 # Lab Modules
 
@@ -66,7 +46,7 @@ Lab modules can be completed in any order. Mark the lab completed in the [SmartS
 ## [gNOI reset.proto and ZTP Module](gNOI_reset_proto.md)
 Reset.proto also known as the Factory Reset API is the latest addition to the gNOI operations interface within the gNMI. 
 
-The factory reset API as described at [openconfig/gnoi](https://github.com/openconfig/gnoi/blob/master/factory_reset/​) with tooling from [google/gnxi](https://github.com/google/gnxi/tree/master/gnoi_reset).
+The factory reset API as described at [openconfig/gnoi](https://github.com/openconfig/gnoi/blob/master/factory_reset/) with tooling from [google/gnxi](https://github.com/google/gnxi/tree/master/gnoi_reset).
 
 Use the NETCONF API with Guest Shell to create the base configurations for a switch to [implement Zero Touch Provisioning](ZTP.md).
 
