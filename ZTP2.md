@@ -76,22 +76,20 @@ Check the status of the NGINX webserver to ensure it is running:
 ## Step 5:
 **IOS XE Device:** Now the prerequisites for ZTP are met and the device is ready to be reloaded once the previous configuration is removed – this is to ensure that the Day 0 ZTP process is initialized once the switch boots. This emulates a new, un-configured device that is ready to provisioned.
 
-## Step 6:
-**IOS XE Device:** Now the prerequisites for ZTP are met and the device is ready to be reloaded once the previous configuration is removed – this is to ensure that the Day 0 ZTP process is initialized once the switch boots. This emulates a new, un-configured device that is ready to provisioned.
-
-Conect to the Serial Console of the C9300 using MobaXterm's shortcut for **"C9300 - Serial Console"** or from the Ubuntu VM using the ***~/console-helper.sh*** script - Both methods open a serial connection to the pod switch.
-
-![](imgs/mobaxterm_console.png)
+Conect to the Serial Console of the C9300 from the Ubuntu VM using the following script
+> **auto@automation:~$** ~/console-helper.sh
 
 Once connected to the serial console the next step is to erase the configuration and reload the device
 
 This process will take about 5 minutes to successfully complete. Once completed, ICMP pings from the device will begin responding.
 
+ 
 > **C9300# wr**
 
 > **C9300# wr erase**
 
 > **C9300# reload**
+
 
 If prompted to save the configuration, enter `no`
 
