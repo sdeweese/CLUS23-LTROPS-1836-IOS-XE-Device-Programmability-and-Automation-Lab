@@ -74,7 +74,48 @@ Check the status of the NGINX webserver to ensure it is running:
 
 
 ## Step 5:
-**IOS XE Device:** Now the prerequisites for ZTP are met and the device is ready to be reloaded once the previous configuration is removed – this is to ensure that the Day0 ZTP process is initialized once the switch boots. This emulates a new, un-configured device that is ready to provisioned.
+**IOS XE Device:** Now the prerequisites for ZTP are met and the device is ready to be reloaded once the previous configuration is removed – this is to ensure that the Day 0 ZTP process is initialized once the switch boots. This emulates a new, un-configured device that is ready to provisioned.
+
+## Step 6:
+**IOS XE Device:** Now the prerequisites for ZTP are met and the device is ready to be reloaded once the previous configuration is removed – this is to ensure that the Day 0 ZTP process is initialized once the switch boots. This emulates a new, un-configured device that is ready to provisioned.
+
+Conect to the Serial Console of the C9300 using MobaXterm's shortcut for **"C9300 - Serial Console"** or from the Ubuntu VM using the ***~/console-helper.sh*** script - Both methods open a serial connection to the pod switch.
+
+![](imgs/mobaxterm_console.png)
+
+Once connected to the serial console the next step is to erase the configuration and reload the device
+
+This process will take about 5 minutes to successfully complete. Once completed, ICMP pings from the device will begin responding.
+
+> **C9300# wr**
+
+> **C9300# wr erase**
+
+> **C9300# reload**
+
+If prompted to save the configuration, enter `no`
+
+Press enter to confirm reloading
+
+![](imgs/wr_er_reload.png)
+
+The device will reload and once IOS XE boots up, the ZTP process will start. The device will obtain the ztp.py configuration file from the Ubuntu server that it receives in the DHCP response.
+
+During this time, the DHCP and HTTP server logs can be followed, and progress can be tracked as the device boots completes the ZTP process. In this case, we see first the DHCP server providing the `DHCPOFFER` to the device, and next the `GET` requests to the `HTTP` server (from the device at `IP 10.9.1.154`) that accesses and executes the `ztp-simply.py` script:
+
+> **auto@automation:~$** sh ~/watch_ztp_logs.sh
+![](imgs/watch_ztp.png)
+
+You may also start a ping to watch when the interface on the devices comes back online with the configuration applied. Start a ping to 10.1.1.5 which is the IP address specified in the `ztp-simple.py` file.
+
+> **auto@automation:~$** ping 10.1.1.5
+Once the ICMP ping replies start then the device has been successfully provisioned - You can now log back in using SSH or Telnet.
+
+![](imgs/icmp_returns.png)
+
+Example output from the serial console that shows successful ZTP and Python file execution:
+
+![](imgs/ztp.gif)
 
 ## Conclusion
 The Cisco IOS XE Catalyst 9300 switch will  successfully completed the Zero Touch Provisioning process and and be fully configured on the network. Because of the pre-configuration within the ztp-simple.py file, all use cases for the related IOS XE Programmability Lab have been enabled. Specifically, the switch has an IP, username/password, SSH access enabled, and the programmatic NETCONF and RESTCONF interfaces have also been configured and enabled.
