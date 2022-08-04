@@ -184,10 +184,6 @@ Make an API call to get the interface description.
 
 
 ## Learn more about YANG Suite
-<<<<<<< HEAD
-- [YANG Suite on GitHub](https://github.com/CiscoDevNet/yangsuite)
-- [YouTube Demo](https://youtu.be/smrhjL5Ayz0)
-=======
 - [YANG Suite GitHub](https://github.com/CiscoDevNet/yangsuite)
 - [YANG Suite on DevNet](https://developer.cisco.com/yangsuite/)
 
@@ -195,4 +191,3 @@ Make an API call to get the interface description.
 - [Getting started with Cisco YANG Suite](https://youtu.be/smrhjL5Ayz0)
 - [All YANG Suite, all the time, DevNet Snack Minute, Episode 9](https://www.youtube.com/watch?v=3zmNDfn8b38)
 - [NETCONF with YANG Suite](https://www.youtube.com/watch?v=dTun33611JA)
->>>>>>> 8f1427d4543ba387688b1b512a644483dd1acd58
