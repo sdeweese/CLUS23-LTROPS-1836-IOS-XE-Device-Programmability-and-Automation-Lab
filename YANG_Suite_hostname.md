@@ -41,7 +41,7 @@ The screen should look similar to below:
 
 ![](./imgs/yangsuite-get-hostname.png)
 
-1. Click the blue "Run RPC(s)" button to ***send*** the XML RPC to the switch's NETCONF Interface in order to retreive the config as requested
+1. Click the blue "Run RPC(s)" button to ***send*** the XML RPC to the switch's NETCONF Interface in order to retrieve the config as requested
 
 1. In the new tab that's opened, notice the hostname in the response. (note: you may need to scroll to the bottom of the page)
 
@@ -73,7 +73,7 @@ The screen should look similar to below:
 
 ![](./imgs/yangsuite-build-set-hostname.png)
 
-1. Click the blue "Run RPC(s)" button to ***send*** the XML RPC to the switch's NETCONF Interface in order to retreive the config as requested
+1. Click the blue "Run RPC(s)" button to ***send*** the XML RPC to the switch's NETCONF Interface in order to retrieve the config as requested
 
 1. In the new tab that's opened (note: you may need to close a previously opened tabs), notice the "ok" in the response indicating that the hostname was configured. (note: you may need to scroll to the bottom of the page)
 
