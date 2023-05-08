@@ -1,4 +1,4 @@
-# Welcome to the Cisco Live 22 IOS XE Programmablity Lab
+# Welcome to the Cisco Live 23 IOS XE Programmablity Lab
 
 ### This lab guide serves as the Cisco Live US (Las Vegas) Programmability and Automation Lab with Catalyst IOS XE Platforms session LTROPS-1836
 
@@ -55,12 +55,10 @@ Use the NETCONF API with Guest Shell to create the base configurations for a swi
 [YANG Suite](https://github.com/CiscoDevNet/yangsuite) is HTML5 based tooling that is available for working with the YANG based programmable interfaces on Cisco IOS XE, XR, and NX Network Operating Systems. It has plugins that allow for interacting with the programmable interfaces and supports downloading YANG files directly from network devices. In this module, we will explore using NETCONF and RESTCONF to configure a switch and we will create a gRPC telemetry subscriptions.
 
 
-## [Secure Streaming Telemetry Module](https://github.com/guaguila/CLive2022_DEVWKS-3240)
-Model-driven Telemetry (MDT) provides a mechanism to stream data from an MDT-capable device to a destination. It uses a new approach for network monitoring in which data is streamed from network devices continuously using a push model and provides near real-time access to operational statistics for monitoring data. Applications can subscribe to specific data items they need, by using standards-based YANG data models over open protocols. Structured data is published at a defined cadence or on-change, based upon the subscription criteria and data type.
+## [Postman Module](Postman.md)
 
-**Dial-out** telmetry subscriptions need to be statically configured on the network device using any of the available interfaces (CLI, APIs, etc.) and the device will open a session with the application. If the session goes down, the device will try to open a new session. gRPC is the Dial-Out telemetry interface. 
 
-Additionally, we can set up a secure telmetry subscriptions by using mutual TLS (mTLS) and adding certificates using the gNOI_cert operation, which will create a new certificate and apply it to the IOS XE device.
+
 
 
 ## [Terraform Module](Terraform.md)
