@@ -56,9 +56,7 @@ Use the NETCONF API with Guest Shell to create the base configurations for a swi
 
 
 ## [Postman Module](Postman.md)
-
-
-
+[Postman](https://www.postman.com) is a common tool used for testing REST APIs. Taking it a step further, we can use Postman to test Cisco IOS XE REST APIs, namely RESTCONF to configure, manage, and monitor data from these Cisco devices. Cisco has published various Postman collections to make it easier to use Recently, Cisco has publicly released a new BPG EVPN collection for easy configuration management. 
 
 
 ## [Terraform Module](Terraform.md)
