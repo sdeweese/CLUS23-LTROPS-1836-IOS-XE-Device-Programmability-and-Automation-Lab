@@ -2,7 +2,7 @@
 
 ## **Module: gNOI reset.proto "factory reset" API**
 
-## Version: Cisco IOS XE 17.8
+## Version: Cisco IOS XE 17.11
 
 ![](imgs/device_lifecycle.png)
 
@@ -57,7 +57,7 @@ Settings
 ========
   Server: Enabled
   Server port: 50052
-  Secure server: Disabled
+  Secure server: Enabled
   Secure server port: 9339
   Secure client authentication: Disabled
   Secure trustpoint:
@@ -114,10 +114,10 @@ The tooling is installed using the **go get** and **go build** commands within t
 
 The following commands to get have already been done for you to set up gNOI.reset on the Linux VM:
 
-***go get github.com/google/gnxi/gnoi_reset​***
-
-***go install github.com/google/gnxi/gnoi_reset​***
-
+```
+go get github.com/google/gnxi/gnoi_reset
+go install github.com/google/gnxi/gnoi_reset
+```
 
 # gnoi_reset and zero_fill
 
@@ -129,7 +129,8 @@ Zero Fill is the process that instructs the target device to zero fill the persi
 
 On the Linux VM, run the following command to reset all of the configurations and disk back to factory settings:
 
-`./gnoi_reset -target_addr 10.1.1.5:50052 -target_name dd -notls -zero_fill`
+`/home/auto/gnoi_reset -target_addr 10.1.1.5:9339 -target_name c9300 -zero_fill -cert ./client.crt -ca ./rootCA.pem  -key ./rootCA.key  -insecure
+`
 
 A message similar to this should appear: 
 ***I1014 11:53:15.248633 2761247 gnoi_reset.go:59] Reset Called Successfully!***
