@@ -19,8 +19,6 @@ To access the lab, you will need to SSH to the VM specific host. From the VM hos
 
 During the Cisco Live event, each participant receives their own hardware Pod. Each pod includes a Linux development host, YANG Suite, a running NetBox instance, and a ticket system.
 
-![line](../img/banner_line.png)
-
 ## Connect to your environment using Visual Studio Code remote SSH extension
 
 > **Note**: Instructor will provide you with your Pod number and credentials.
