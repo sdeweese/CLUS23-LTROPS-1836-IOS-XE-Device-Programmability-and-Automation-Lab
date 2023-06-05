@@ -6,6 +6,44 @@ Terraform providers communicate with the desired resource. Typically, there are 
 
 Terraform is installed using the “apt” package management system. Running the Debian Package command, or dpkg, with the -L flag (list) shows which packages are installed on the system, including the Terraform tool.
 
+
+### Note: This portion of the lab is designed for working in dCloud (not in the programmabilty pods) 
+1. If you haven't already, connect to dCloud if you aren't already. See facilitators for a previously reserved session. 
+    1. You can reach this environment using RDP or navigating to through the brower 
+    1. After the session, you can reserve your own session [here](https://dcloud2-sjc.cisco.com/content/catalogue?search=Cisco%20Catalyst%209000%20IOS%20XE%20Programmability%20%26%20Automation%20Lab&screenCommand=openSearchScreen). Note that you may need to change the region to match your local region.
+1. Open the Visual Studio Code application
+1. Within VS Code, navigate to File > Open Folder
+![](./imgs/terraformbgp1.png)
+1. Open the Folder "This PC" > "Desktop" > "Terraform". Then click "Select Folder"
+![](./imgs/terraformbgp2.png)
+1. Notice the Terraform (.tf) files provided and the .auto.tfvars file which contains the inventory information about the devices we will configure. The spine and leaves are separated because they will be configured differently
+![](./imgs/terraformbgp3.png)
+
+1. Open a terminal window within VS Code using "Terminal" > "New Window"
+![](./imgs/terraformbgp4.png)
+
+1. Within the terminal window, navigtae to the cisco-iac-terraform-c9k\evpn\terraform\tutorial directory
+`cd cisco-iac-terraform-c9k\evpn\terraform\tutorial`
+![](./imgs/terraformbgp5.png)
+1. Initialize Terraform `terraform init`
+![](./imgs/terraformbgp6.png)
+
+1. Review the changes that will be made to the device by using the Terraform plan command. Any green "+" will add a resource (feature) to the devices while a red "-" will remove a resource from the devices. In this case, we'll only be adding :) 
+![](./imgs/terraformbgp7.png)
+
+1. Configure BGP EVPN ` terraform apply -auto-approve`
+![](./imgs/terraformbgp8.png)
+
+1. Note, this will take a few minutes to complete. Once done, you have sucessfully configured BGP EVPN!
+
+
+For a full view, see the example below:
+![](./imgs/terraform-bgp-apply.gif)
+
+
+### Note: This portion of the lab is designed for working in the programmabilty pods (not the dCloud environment)
+
+## Configure VLAN
 1. We'll use the JSON in a Terraform file to configure a new VLAN on a Catalyst 9300.
 1. Navigate to the terraform directory `cd ~/terraform` within the Linux VM
 1. Review the terraform.tf file to apply a new VLAN to the switch using the command `cat terraform.tf`, which will look similar to the following:
