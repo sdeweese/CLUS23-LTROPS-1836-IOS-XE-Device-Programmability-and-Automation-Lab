@@ -1,5 +1,7 @@
 # Welcome to the Cisco Live 23 IOS XE Programmablity Lab
 
+## Version 17.11
+
 ### This lab guide serves as the Cisco Live US (Las Vegas) Programmability and Automation Lab with Catalyst IOS XE Platforms session LTROPS-1836
 
 # Lab Introduction
