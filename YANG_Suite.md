@@ -54,7 +54,7 @@ For a full view, see the example below:
 ![](./imgs/yangsuite-bgp-get.gif)
 
 
-### Note: This portion of the lab is designed for working in the programmabilty pods (not the dCloud environement)
+### Note: This portion of the lab is designed for working in the programmabilty pods (not the dCloud environment)
 ## NETCONF: GET Interface Descriptions 
 Using NETCONF, make an API call to the C9300 device to determine the description of an interface.
 
