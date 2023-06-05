@@ -90,3 +90,86 @@ In this module, we will use CLI2YANG to create a Terraform payload to configure 
 
 # Feedback
  Mark the lab completed and provide any feedback and comments in the [SmartSheet](https://app.smartsheet.com/b/form/3c15e982ec7c40a089ccfdeb375776e0) form once you have successfully completed the modules above. 
+
+
+
+# New Lab Access
+# 0. Connect to the lab environment
+
+During the Cisco Live event, each participant receives their own hardware Pod. Each pod includes a Linux development host, YANG Suite, a running NetBox instance, and a ticket system.
+
+![line](../img/banner_line.png)
+
+## Connect to your environment using Visual Studio Code remote SSH extension
+
+> **Note**: Instructor will provide you with your Pod number and credentials.
+
+**STEPS:**
+
+<table>
+
+<tr><th>Step</th><th width=50%>Description</th><th>Screenshot / code snippet</th></tr>
+
+<tr><td>1.</td><td>
+
+Open the Microsoft Visual Studio Code application from your desktop.
+
+</td><td>
+
+![Visual Studio Code logo](./lab_img/task_0/1.png)
+</td></tr>
+
+<tr><td>2.</td><td>
+
+To connect to your Linux Developer VM, click the green icon on the left bottom of Visual Studio Code application.
+
+</td><td>
+
+![Connect](./lab_img/task_0/2.png)
+
+</td></tr>
+
+<tr><td>3.</td><td>
+
+Select `Connect to Host...`.
+
+</td><td>
+
+![Connect](./lab_img/task_0/3.png)
+
+</td></tr>
+<tr><td>4.</td><td>
+    
+Fill in the connection details to your Pod's Developer VM: `auto@pod<xx>-xelab.cisco.com:3389` where `<xx>` should be replaced with a two digit number of your pod. For example Pod 50 would be `auto@pod50-xelab.cisco.com:3389`.
+
+> **Note**: If your pod number is one digit, add a zero in front, for example Pod 1 number would be `01`.
+
+> **Note**: If you are prompted to select the platform of the remote host, click `Linux`.
+
+</td><td>
+
+![connect](./lab_img/task_0/connect.png)
+
+</td></tr>
+<tr><td>5.</td><td>
+
+If prompted to verify the Fingerprint, click `Continue`.
+
+</td></tr>
+<tr><td>6.</td><td>
+
+Fill in the password that the instructor has provided you.
+
+
+</td></tr>
+<tr><td>7.</td><td>
+
+After a short period of loading, Visual Studio code view will update to match the settings on the developer VM. Note how the terminal view on the bottom right now starts with the `(venv) auto@podXY-xelab:~$` - this is the Developer VM on which you will complete the Lab tasks. Note also that you can see on the bottom right the Pod URL to which you are connected to.
+
+> **Note**: If the terminal view does not show up automatically, you can open it from the top menu of Visual Studio Code application: `Terminal` > `New terminal`
+</td><td>
+
+![Overview](./lab_img/task_0/4.png)
+
+</td></tr>
+</table>
