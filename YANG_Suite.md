@@ -5,6 +5,7 @@
 
 This lab has multiple sections:
 
+1. NETCONF with BGP EVPN oper
 1. NETCONF GET Gig Inteface config
 1. NETCONF Update interface into shut state
 1. NETCONF GET Loopback interface
@@ -13,6 +14,47 @@ This lab has multiple sections:
 1. RESTCONF GET Loopback
 1. gRPC Telemetry
 
+### Note: This portion of the lab is designed for working in dCloud (not in the programmabilty pods) 
+## NETCONF: GET BGP EVPN
+1. Connect to dCloud if you aren't already. See facilitators for a previously reserved session. 
+    1. You can reach this environment using RDP or navigating to through the brower 
+    1. After the session, you can reserve your own session [here](https://dcloud2-sjc.cisco.com/content/catalogue?search=Cisco%20Catalyst%209000%20IOS%20XE%20Programmability%20%26%20Automation%20Lab&screenCommand=openSearchScreen). Note that you may need to change the region to match your local region.
+
+1. Once your dCloud environment has booted up, navigate to Chrome and the tab "localhost:8480"
+![](./imgs/yangsuite1.png)
+
+1. On the left blue navigation bar, select "Protocols" > "NETCONF" 
+![](./imgs/yangsuite2.png)
+
+1. YANG Set: “198-18-1-21-default-yangset”
+![](./imgs/yangsuite3.png)
+
+1. Modules: "Cisco-IOS-XE-bgp-oper" (note: start typing "bgp" to filter through the options in the dropdown menu)
+![](./imgs/yangsuite4.png)
+
+1. Click the blue “Load Modules” button
+
+1. NETCONF Operation: “get”
+1. Device: "198.18.1.21"
+![](./imgs/yangsuite5.png)
+
+1. Wait for the tree to appear in the grey box on the left. (note: if you get an Error 500 popup, just ignore it and close the popup.)
+1. Select the checkbox next to "bgp-state-data"
+![](./imgs/yangsuite6.png)
+
+1. If there is previous RPC in the RPC window, select "Clear RPC"
+1. Select “Build RPC”
+1. Select “Run RPC”
+![](./imgs/yangsuite7.png)
+
+1. Validate that data is coming in from the device in a new window
+![](./imgs/yangsuite8.png)
+
+For a full view, see the example below:
+![](./imgs/yangsuite-bgp-get.gif)
+
+
+### Note: This portion of the lab is designed for working in the programmabilty pods (not the dCloud environement)
 ## NETCONF: GET Interface Descriptions 
 Using NETCONF, make an API call to the C9300 device to determine the description of an interface.
 
