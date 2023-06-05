@@ -50,6 +50,15 @@ The factory reset API as described at [openconfig/gnoi](https://github.com/openc
 
 Use the NETCONF API with Guest Shell to create the base configurations for a switch to [implement Zero Touch Provisioning](ZTP.md).
 
+## [gRPC Tunnel](./gRPCTunnel.md)
+“grpctunnel is an implementation of a TCP-over-gRPC tunnel”
+It is very similar to the commonly used “SSH tunnel” concept. Learn more at https://github.com/openconfig/grpctunnel. The benefits of gRPC Tunnle include:
+- The devices makes a secure outbound connection to the gRPC tunnel server in order to expose the gNMI API for operational use
+- Many devices can connect into a single tunnel server in order to increase operational efficiency
+- Tunnels can be opened to any number of servers as needed and is not limited to a single tunnel
+
+
+
 
 ## [YANG Suite Module](YANG_Suite.md)
 [YANG Suite](https://github.com/CiscoDevNet/yangsuite) is HTML5 based tooling that is available for working with the YANG based programmable interfaces on Cisco IOS XE, XR, and NX Network Operating Systems. It has plugins that allow for interacting with the programmable interfaces and supports downloading YANG files directly from network devices. In this module, we will explore using NETCONF and RESTCONF to configure a switch and we will create a gRPC telemetry subscriptions.
