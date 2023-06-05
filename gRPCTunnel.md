@@ -1,13 +1,13 @@
 ## gRPC Tunnel
 Use gRPC Tunnel to make a secure direct connection from one or many devices to the gRPC tunnel server host.
 
-1. Install gnmic tooling
+1. Review how to install gnmic tooling - this has already been completed in the lab POD
 ```
 bash -c "$ (curl -sL https://get-gnmic.openconfig.net)"
 ```
 ![](./imgs/grpcTunnel1.png)
 
-2. Configure gnmic for tunnel server in tunnel_server_config.yaml
+2. Change Directory to the **gnmic** folder by entering command **cd gnmic**  and then review the tunnel_server_config.yaml by running **cat tunnel_server_config.yaml**
 ```
 insecure: false
 skip-verify: true
